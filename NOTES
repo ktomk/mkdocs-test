@@ -1,0 +1,30 @@
+
+two test cases a and b
+
+first is mkdocs 1.2
+
+second is current HEAD
+
+(exact version in use is shown in every test setup and run)
+
+test plan:
+
+  # [1] make test-a-setup
+  # [2] ./test.bash
+  # [3] make test-b-setup
+  # [4] ./test.bash
+  # [5] make clean
+
+the example is as minimalistic as I could imagine:
+
+  docs/README.md -> README.md
+
+in case anything hangs there is
+
+  make clean
+
+that kills serving processes and removes files from disk.
+
+to just create the file structure
+
+  make docs
