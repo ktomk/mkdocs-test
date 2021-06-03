@@ -11,20 +11,22 @@ test plan:
 
   # [1] make test-a-setup
   # [2] ./test.bash
-  # [3] make test-b-setup
-  # [4] ./test.bash
-  # [5] make clean
+  # [3] make clean
+  # [4] make test-b-setup
+  # [5] ./test.bash
 
 the example is as minimalistic as I could imagine:
 
-  docs/README.md -> README.md
+    docs/README.md -> README.md
 
 in case anything hangs there is
 
-  make clean
+    make clean
 
 that kills serving processes and removes files from disk.
 
 to just create the file structure
 
-  make docs
+    make docs
+
+test runner is ./run.sh
