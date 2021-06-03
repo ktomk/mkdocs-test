@@ -19,7 +19,7 @@ test-a-setup: docs/README.md mkdocs.yml
 	$(call setup,mkdocs)
 
 test-b-setup: docs/README.md mkdocs.yml
-	$(call setup,-e git+git@github.com:mkdocs/mkdocs.git@769a926691c970ccb8ea0f8efe7d34cc9442576f#egg=mkdocs)
+	$(call setup,-e git+ssh://git@github.com/mkdocs/mkdocs.git@refs/pull/2438/head#egg=mkdocs)
 
 .PHONY: clean
 clean:
