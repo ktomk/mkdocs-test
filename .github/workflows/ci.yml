@@ -1,0 +1,17 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    name: ./run.sh
+    steps:
+      - uses: "actions/checkout@v2"
+      - run: './run.sh'
